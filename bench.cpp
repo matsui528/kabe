@@ -54,8 +54,8 @@ void benchmark_bloom(const auto& filter, const auto& existing_terms, const auto&
 int main() {
     std::set<std::string> kabe_set(kabe_terms.begin(), kabe_terms.end());
     std::unordered_set<std::string> kabe_unordered_set(kabe_terms.begin(), kabe_terms.end());
-    boost::container::flat_set<std::string> kabe_flat_set(kabe_terms.begin(), kabe_terms.end());
     boost::unordered_flat_set<std::string> kabe_unordered_flat_set(kabe_terms.begin(), kabe_terms.end());
+    boost::container::flat_set<std::string> kabe_flat_set(kabe_terms.begin(), kabe_terms.end());
 
     boost::bloom::filter<std::string, 2> kabe_bloom(kabe_terms.size() * 3);
     for (const auto& term : kabe_terms) {
@@ -71,8 +71,8 @@ int main() {
 
     benchmark(kabe_set, existing_terms, non_existing_terms, "std::set");
     benchmark(kabe_unordered_set, existing_terms, non_existing_terms, "std::unordered_set");
-    benchmark(kabe_flat_set, existing_terms, non_existing_terms, "boost::container::flat_set");
     benchmark(kabe_unordered_flat_set, existing_terms, non_existing_terms, "boost::unordered_flat_set");
+    benchmark(kabe_flat_set, existing_terms, non_existing_terms, "boost::container::flat_set");
     benchmark_bloom(kabe_bloom, existing_terms, non_existing_terms, "boost::bloom::filter");
 
     return 0;

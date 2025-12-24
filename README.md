@@ -30,14 +30,14 @@ Non-existing terms (0 found): 192 μs
 Set size: 7524
 Existing terms (1000 found): 74 μs
 Non-existing terms (0 found): 65 μs
-=== boost::container::flat_set ===
-Set size: 7524
-Existing terms (1000 found): 206 μs
-Non-existing terms (0 found): 200 μs
 === boost::unordered_flat_set ===
 Set size: 7524
 Existing terms (1000 found): 32 μs
 Non-existing terms (0 found): 14 μs
+=== boost::container::flat_set ===
+Set size: 7524
+Existing terms (1000 found): 206 μs
+Non-existing terms (0 found): 200 μs
 === boost::bloom::filter ===
 Existing terms (1000 found): 11 μs
 Non-existing terms (200 found): 18 μs
