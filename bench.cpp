@@ -57,7 +57,7 @@ int main() {
     boost::container::flat_set<std::string> kabe_flat_set(kabe_terms.begin(), kabe_terms.end());
     boost::unordered_flat_set<std::string> kabe_unordered_flat_set(kabe_terms.begin(), kabe_terms.end());
 
-    boost::bloom::filter<std::string, 2> kabe_bloom(kabe_terms.size() * 5);
+    boost::bloom::filter<std::string, 2> kabe_bloom(kabe_terms.size() * 3);
     for (const auto& term : kabe_terms) {
         kabe_bloom.insert(term);
     }
