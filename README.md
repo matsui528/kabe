@@ -24,27 +24,23 @@ Actionsで自動的に実行してベンチをとります。
 ```
 === std::set ===
 Set size: 7524
-Existing terms (1000 found): 197 μs
-Non-existing terms (0 found): 181 μs
-
+Existing terms (1000 found): 226 μs
+Non-existing terms (0 found): 192 μs
 === std::unordered_set ===
 Set size: 7524
-Existing terms (1000 found): 59 μs
-Non-existing terms (0 found): 50 μs
-
+Existing terms (1000 found): 74 μs
+Non-existing terms (0 found): 65 μs
 === boost::container::flat_set ===
 Set size: 7524
-Existing terms (1000 found): 196 μs
-Non-existing terms (0 found): 199 μs
-
+Existing terms (1000 found): 206 μs
+Non-existing terms (0 found): 200 μs
 === boost::unordered_flat_set ===
 Set size: 7524
-Existing terms (1000 found): 23 μs
-Non-existing terms (0 found): 13 μs
-
+Existing terms (1000 found): 32 μs
+Non-existing terms (0 found): 14 μs
 === boost::bloom::filter ===
-Existing terms (1000 found): 12 μs
-Non-existing terms (119 found): 17 μs
+Existing terms (1000 found): 11 μs
+Non-existing terms (200 found): 18 μs
 ```
 
 - bloomが最速ですが、擬陽性が119個発生しています（義陽性率9%程度で設定していたので、大体想定通りです）。
